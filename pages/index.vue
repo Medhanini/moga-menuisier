@@ -4,12 +4,16 @@
     justify-center
     align-center
   >
-
+<TheCarousel />
   </v-layout>
 </template>
 
 <script>
+import TheCarousel from '~/components/TheCarousel'
 export default {
-  name:"index"
+  name:"index",
+  components:{
+    TheCarousel
+  }
 }
 </script>
