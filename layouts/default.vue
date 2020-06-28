@@ -1,8 +1,11 @@
 <template>
-  <v-app dark>
+  <v-app >
     <TheNavBar />
-    <v-main>
-      <v-container>
+     <v-main>
+      <v-container
+        class="fill-height"
+        fluid
+      >
         <nuxt />
       </v-container>
     </v-main>
