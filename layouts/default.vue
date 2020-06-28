@@ -1,7 +1,7 @@
 <template>
   <v-app >
     <TheNavBar />
-     <v-main>
+     <v-main  >
       <v-container
         class="fill-height"
         fluid
