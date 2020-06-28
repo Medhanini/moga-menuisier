@@ -1,9 +1,14 @@
 <template>
+<div>
+<h1> Nos services </h1>
 <v-row>
     <v-col 
     v-for="i in 3"
     :key="i"
-    cols="4" >
+    lg="4"
+    md="6"
+    cols="12"
+    >
   <v-card
     :loading="loading"
     class=" my-12"
@@ -41,6 +46,7 @@
   </v-card>
   </v-col>
   </v-row>
+</div>
 </template>
 
 
