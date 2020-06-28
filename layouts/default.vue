@@ -2,10 +2,7 @@
   <v-app >
     <TheNavBar />
      <v-main  >
-      <v-container
-        class="fill-height"
-        fluid
-      >
+      <v-container>
         <nuxt />
       </v-container>
     </v-main>

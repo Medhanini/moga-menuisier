@@ -1,22 +1,18 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
+<div>
 <TheCarousel />
-<!-- <TheCarousel3D /> -->
-  </v-layout>
+<TheOurServices />
+</div>
 </template>
 
 <script>
 import TheCarousel from '~/components/TheCarousel'
-// import TheCarousel3D from '~/components/TheCarousel3D'
+import TheOurServices from '~/components/TheOurServices'
 export default {
   name:"index",
   components:{
     TheCarousel,
-    // TheCarousel3D
+    TheOurServices
   }
 }
 </script>
