@@ -57,19 +57,19 @@
           title:'Menuiserie Aluminium',
           subtitle:'Menuiserie Aluminium Essaouira - Maroc',
           description:"Pour toute réparation ou rénovation d'aluminium contactez les M3alem de Moga Menuisier. Trouvez gratuitement la sélection des meilleurs menuisier d'aluminium à Essaouira. Service 100% Gratuit.",
-          image:"https://cdn.vuetifyjs.com/images/cards/cooking.png"
+          image:"https://www.abhaje.ma/images/bo2.jpg"
         },
        {
           title:'Menuiserie Inox',
           subtitle:'Menuiserie Inox Essaouira - Maroc',
           description:"Disposant d'un vaste atelier parfaitement équipé, Moga Menuisier réalise sur mesure tous travaux de menuiserie et ferronnerie métallique mais également inox.",
-          image:"https://cdn.vuetifyjs.com/images/cards/cooking.png"
+          image:"https://www.coveral.ma/wp-content/uploads/2018/04/8-2.jpg"
         },
         {
           title:'Menuiserie MDF',
           subtitle:'Menuiserie MDF Essaouira - Maroc',
           description:"Moins cher et plus facile à travailler que le bois massif Le MDF (Medium Density Fiberboard) est un panneau composite de fibres de bois à densité moyenne.",
-          image:"https://cdn.vuetifyjs.com/images/cards/cooking.png"
+          image:"https://img-4.linternaute.com/QgdFWO5ifv-b5kw_p7N6BJ-0_hA=/1240x/smart/eeb72736f5754e2485aeaaeb24b032d3/ccmcms-linternaute/10657500.jpg"
         } 
       ]
       }
