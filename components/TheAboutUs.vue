@@ -37,8 +37,8 @@
 <script>
   export default {
       name:'TheAboutUs',
-    data: () => ({
-      items: [
+    data(){
+      return{items: [
         {
           color: '#1F7087',
           src: '/images/header_logo_white.webp',
@@ -46,7 +46,7 @@
           title: 'à propos',
           artist: '',
         }
-      ],
-    }),
+      ],}
+    },
   }
 </script>

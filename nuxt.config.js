@@ -37,6 +37,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    { src: "~/plugins/aos.js", mode: "client" },
   ],
   /*
   ** Auto import components
@@ -55,7 +56,13 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/cloudinary'
   ],
+  cloudinary: {
+    cloudName: process.env.CLOUDNAME,
+    apiKey: process.env.API_KEY, //only needed if you are using server-side upload
+    apiSecret: process.env.API_SECRET, //only needed if you are using server-side upload
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

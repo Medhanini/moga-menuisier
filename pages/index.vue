@@ -1,8 +1,10 @@
 <template>
 <div>
 <TheCarousel />
-<TheAboutUs />
+<TheAboutUs data-aos="zoom-in" />
 <TheOurServices />
+<TheContactForm />
+<TheNumbers />
 </div>
 </template>
 
@@ -10,12 +12,17 @@
 import TheCarousel from '~/components/TheCarousel'
 import TheOurServices from '~/components/TheOurServices'
 import TheAboutUs from '~/components/TheAboutUs'
+import TheContactForm from '~/components/TheContactForm'
+import TheNumbers from '~/components/TheNumbers'
+
 export default {
   name:"index",
   components:{
     TheCarousel,
     TheOurServices,
-    TheAboutUs
+    TheAboutUs,
+    TheNumbers,
+    TheContactForm
   }
 }
 </script>

@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/cloudinary": "^1.0.1",
+    "aos": "^3.0.0-beta.6",
     "nuxt": "^2.13.0",
     "vue-carousel-3d": "^0.2.0"
   },
