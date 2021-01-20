@@ -1,7 +1,7 @@
 <template>
 <div>
 <TheCarousel />
-<TheAboutUs data-aos="zoom-in" />
+<TheAboutUs />
 <TheOurServices />
 <TheContactForm />
 <TheNumbers />

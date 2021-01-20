@@ -16,12 +16,12 @@
     <v-card-title>Entrons en contact</v-card-title>
 
     <v-card-text>
-      <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
+      <div>Pour tous renseignements contactez Moga Menuisier.</div>
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
 
-    <v-card-title>Tonight's availability</v-card-title>
+    <v-card-title>Les honoraires de Moga menuisier</v-card-title>
 
     <v-card-text>
       <v-chip-group>
@@ -50,7 +50,7 @@
 
       <v-divider inset></v-divider>
 
-      <v-list-item>
+      <!-- <v-list-item>
         <v-list-item-icon>
           <v-icon color="indigo">
             mdi-email
@@ -63,7 +63,7 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-divider inset></v-divider>
+      <v-divider inset></v-divider> -->
 
       <v-list-item>
         <v-list-item-icon>
@@ -87,7 +87,7 @@
   >
     <v-text-field
       v-model="name"
-      :counter="10"
+      :counter="15"
       :rules="nameRules"
       label="Name"
       required
@@ -99,44 +99,20 @@
       label="E-mail"
       required
     ></v-text-field>
-
-    <v-select
-      v-model="select"
-      :items="items"
-      :rules="[v => !!v || 'Item is required']"
-      label="Item"
+    <v-textarea
+      v-model="message"
+      label="message"
       required
-    ></v-select>
-
-    <v-checkbox
-      v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
-      required
-    ></v-checkbox>
-
+    ></v-textarea>
     <v-btn
       :disabled="!valid"
-      color="success"
+      color="primary"
       class="mr-4"
       @click="validate"
+      block
+      elevation="0"
     >
-      Validate
-    </v-btn>
-
-    <v-btn
-      color="error"
-      class="mr-4"
-      @click="reset"
-    >
-      Reset Form
-    </v-btn>
-
-    <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      Reset Validation
+      Envoyer
     </v-btn>
   </v-form>
   </v-col>
@@ -149,23 +125,16 @@
       loading: false,
       valid: true,
       name: '',
+      message:'',
       nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+        v => !!v || 'Le nom est requis',
+        v => (v && v.length <= 15) || 'Le nom doit comporter moins de 15 caractères',
       ],
       email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-      ],
-      select: null,
-      items: [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4',
-      ],
-      checkbox: false,
+        v => !!v || 'E-mail est requis',
+        v => /.+@.+\..+/.test(v) || 'E-mail Doit être valide',
+      ]
     }),
 
     methods: {
@@ -175,7 +144,12 @@
         setTimeout(() => (this.loading = false), 2000)
       },
       validate () {
-        this.$refs.form.validate()
+        this.$mail.send({
+        from: this.name,
+        subject: 'Moga Menuisier from:'+this.email,
+        text: this.message,
+        to: 'mohamed.hanini95@gmail.com',
+      })
       },
       reset () {
         this.$refs.form.reset()

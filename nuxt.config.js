@@ -56,7 +56,14 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/cloudinary'
+    '@nuxtjs/cloudinary',
+    ['nuxt-mail', {
+      smtp: {
+        host: "smtp.gmail.com",
+        port: 587,
+      },
+    },
+  ]
   ],
   cloudinary: {
     cloudName: process.env.CLOUDNAME,
