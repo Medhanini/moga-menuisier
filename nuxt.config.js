@@ -60,11 +60,17 @@ export default {
     ['nuxt-mail', {
       smtp: {
         host: "smtp.gmail.com",
-        port: 587,
+        port: 530,
       },
     },
   ]
   ],
+  // mail: {
+  //   smtp: {
+  //     host: "smtp.gmail.com",
+  //     port: 530,
+  //   },
+  // },
   cloudinary: {
     cloudName: process.env.CLOUDNAME,
     apiKey: process.env.API_KEY, //only needed if you are using server-side upload
