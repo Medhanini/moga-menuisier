@@ -1,9 +1,15 @@
 <template>
+<section class="TheContactForm" >
+        <v-container >
+<TheComponentTitle :title="title" />
+      </v-container>
   <v-card
     :loading="loading"
     class="mx-auto my-12"
+    elevation="0"
   >
 
+      <v-container >
 <v-row>
 <v-col>
     <template slot="progress">
@@ -117,11 +123,19 @@
   </v-form>
   </v-col>
 </v-row>
+
+      </v-container>
   </v-card>
+  </section>
 </template>
 <script>
+import TheComponentTitle from '~/components/TheComponentTitle'
   export default {
+    components:{
+      TheComponentTitle
+    },
     data: () => ({
+      title:'contact',
       loading: false,
       valid: true,
       name: '',

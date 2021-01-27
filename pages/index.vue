@@ -1,10 +1,10 @@
 <template>
 <div>
 <TheCarousel />
-<TheAboutUs />
 <TheOurServices />
+<TheAboutUs />
 <TheContactForm />
-<TheNumbers />
+<!-- <TheNumbers /> -->
 </div>
 </template>
 

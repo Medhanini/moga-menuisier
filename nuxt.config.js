@@ -57,20 +57,20 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/cloudinary',
-    ['nuxt-mail', {
-      smtp: {
-        host: "smtp.gmail.com",
-        port: 530,
-      },
-    },
-  ]
-  ],
-  // mail: {
-  //   smtp: {
-  //     host: "smtp.gmail.com",
-  //     port: 530,
+  //   ['nuxt-mail', {
+  //     smtp: {
+  //       host: "smtp-relay.gmail.com",
+  //       port: 25,
+  //     },
   //   },
-  // },
+  // ]
+  ],
+  mail: {
+    smtp: {
+      host: "smtp-relay.gmail.com",
+      port: 25,
+    },
+  },
   cloudinary: {
     cloudName: process.env.CLOUDNAME,
     apiKey: process.env.API_KEY, //only needed if you are using server-side upload

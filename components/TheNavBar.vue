@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" :clipped="$vuetify.breakpoint.lgAndUp" app>
+    <!-- <v-navigation-drawer v-model="drawer" :clipped="$vuetify.breakpoint.lgAndUp" app>
       <v-list dense>
         <template v-for="item in items">
           <v-row v-if="item.heading" :key="item.heading" align="center">
@@ -42,30 +42,46 @@
           </v-list-item>
         </template>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
 
-    <v-app-bar :clipped-left="$vuetify.breakpoint.lgAndUp" app color="blue darken-3" dark>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-app-bar :clipped-left="$vuetify.breakpoint.lgAndUp" app color="indigo" dark>
+      <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
-        <span class="hidden-sm-and-down">Bienvenu chez</span>
+        <!-- <span class="hidden-sm-and-down">Bienvenu chez</span>
         <span>
           <strong>Moga Menuisier</strong>
-        </span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn icon large>
+        </span> -->
         <v-avatar size="32px" item>
           <v-img src="/images/header_logo_white.webp" alt="moga menuisier pour toutes frabrication d'aluminium à esssaouira"></v-img>
+        </v-avatar>
+      </v-toolbar-title>
+      <v-row
+      justify="center"
+      no-gutters
+    >
+
+      <v-spacer></v-spacer>
+      <TheNavigation />
+    </v-row>
+      <v-divider vertical  ></v-divider>
+      <v-btn icon large>
+        <v-avatar  item>
+          <v-icon size="20" >mdi-share-variant-outline</v-icon>
         </v-avatar>
       </v-btn>
     </v-app-bar>
   </div>
 </template>
 <script>
+import TheNavigation from '~/components/TheNavigation'
 export default {
   name: "TheNavBar",
+  components:{
+    TheNavigation
+  },
   data() {
     return {
+
       clipped: true,
       drawer: false,
       fixed: false,

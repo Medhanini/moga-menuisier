@@ -1,6 +1,7 @@
 <template>
-<div>
-<h1> Nos services </h1>
+
+      <v-container >
+<TheComponentTitle :title="title" />
 <v-row>
     <v-col 
     v-for="(value, index) in services"
@@ -41,15 +42,20 @@
   </v-card>
   </v-col>
   </v-row>
-</div>
+      </v-container>
 </template>
 
 
 <script>
+import TheComponentTitle from '~/components/TheComponentTitle'
   export default {
     name:'TheOurServices',
+    components:{
+      TheComponentTitle
+    },
     data(){
       return{
+        title:'nos services',
       loading: false,
       selection: 1,
       services:[
