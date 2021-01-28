@@ -20,7 +20,11 @@
           v-for="(item, index) in links"
           :key="index"
         >
-          <v-list-item-title>{{ item }}</v-list-item-title>
+          <v-list-item-title>
+          <nuxt-link to="'/a-propos'" >
+            {{ item }}
+          </nuxt-link>
+          </v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -33,7 +37,9 @@
         rounded
         class="my-2"
       >
-        {{ link }}
+        <nuxt-link to="'/a-propos'" >
+            {{ link }}
+          </nuxt-link>
       </v-btn>
     </div>
 </div>

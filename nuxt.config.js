@@ -10,7 +10,7 @@ export default {
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
-  target: 'server',
+  // target: 'server',
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
@@ -37,7 +37,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    { src: "~/plugins/aos.js", mode: "client" },
+    // { src: "~/plugins/aos.js", mode: "client" },
   ],
   /*
   ** Auto import components
@@ -65,12 +65,12 @@ export default {
   //   },
   // ]
   ],
-  mail: {
-    smtp: {
-      host: "smtp-relay.gmail.com",
-      port: 25,
-    },
-  },
+  // mail: {
+  //   smtp: {
+  //     host: "smtp-relay.gmail.com",
+  //     port: 25,
+  //   },
+  // },
   // cloudinary: {
   //   cloudName: process.env.CLOUDNAME,
   //   apiKey: process.env.API_KEY, //only needed if you are using server-side upload

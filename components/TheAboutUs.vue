@@ -74,7 +74,7 @@ import TheComponentTitle from '~/components/TheComponentTitle'
 <style lang="scss">
 .TheAboutUs{
   height: 500px;
-  background-image: url('/bg.jpeg');
+  background-image: url('/images/bg.jpeg');
   
   /* Center and scale the image nicely */
   background-position: center;

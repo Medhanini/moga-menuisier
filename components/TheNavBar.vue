@@ -61,7 +61,7 @@
     >
 
       <v-spacer></v-spacer>
-      <TheNavigation />
+      <!-- <TheNavigation /> -->
     </v-row>
       <v-divider vertical  ></v-divider>
       <v-btn icon large>

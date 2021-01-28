@@ -1,5 +1,5 @@
 <template>
-
+<section>
       <v-container >
 <TheComponentTitle :title="title" />
 <v-row>
@@ -43,6 +43,7 @@
   </v-col>
   </v-row>
       </v-container>
+      </section>
 </template>
 
 
