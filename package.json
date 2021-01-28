@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
-    "@nuxtjs/cloudinary": "^1.0.1",
     "aos": "^3.0.0-beta.6",
     "emailjs-com": "^2.6.4",
     "nuxt": "^2.13.0",

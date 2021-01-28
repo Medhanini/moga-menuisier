@@ -16,15 +16,15 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s Menuiserie Aluminium à Essaouira - Maroc | Moga-menuisier.com ' + process.env.npm_package_name,
+    title: process.env.npm_package_name || 'Menuiserie Aluminium à Essaouira - Maroc | moga-menuisier.com',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || 'Trouvez facilement les meilleurs professionnels du bâtiment pour tous vos travaux de menuiserie sur MogaMenuisier.com' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || 'Menuiserie Aluminium à Essaouira - Maroc : Trouvez facilement les meilleurs professionnels du menuiserie pour tous vos travaux sur moga-menuisier.com - société N°1 des professionnels du menuiserie à Essaouira - Maroc.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/images/header_logo_white.webp' }
     ]
   },
   /*
@@ -56,7 +56,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/cloudinary',
+    // '@nuxtjs/cloudinary',
   //   ['nuxt-mail', {
   //     smtp: {
   //       host: "smtp-relay.gmail.com",
@@ -71,11 +71,11 @@ export default {
       port: 25,
     },
   },
-  cloudinary: {
-    cloudName: process.env.CLOUDNAME,
-    apiKey: process.env.API_KEY, //only needed if you are using server-side upload
-    apiSecret: process.env.API_SECRET, //only needed if you are using server-side upload
-  },
+  // cloudinary: {
+  //   cloudName: process.env.CLOUDNAME,
+  //   apiKey: process.env.API_KEY, //only needed if you are using server-side upload
+  //   apiSecret: process.env.API_SECRET, //only needed if you are using server-side upload
+  // },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
