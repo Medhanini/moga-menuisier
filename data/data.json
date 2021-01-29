@@ -31,7 +31,7 @@
         ,
         "about":{
             "title":"à propos",
-            "logo":"/images/logo.png",
+            "img":"/images/logo.png",
             "text":"Moga Menuisier est une société spécialisée dans la menuiserie Aluminium , Inox ou/et MDF Disposant d'un vaste atelier parfaitement équipé, Moga Menuisier réalise sur mesure tous travaux de menuiserie Moins cher avec une large expérience dans le domaine de menuiserie, La passion et le savoir-faire de nos artisans .Impliqués dans notre travail, nous vous faisons profiter d’un travail professionnel et d’une prestation de qualité optimale."
         },
         "services":{
@@ -64,17 +64,17 @@
             "hours_work":{
                 "title":"Les honoraires de Moga menuisier",
                 "start_work":"du 9:00 AM",
-                "end_ work":"jusqu'au 20 PM"
+                "end_work":"jusqu'au 20 PM"
             },
             "infos":[
                 {
-                    "icon":"",
+                    "icon1":"mdi-phone",
                     "title":"+212 6 09 88 97 70",
                     "subtitle":"Numéro de téléphone de Moga Menuisier",
-                    "icon2":""
+                    "icon2":"mdi-whatsapp"
                 },
                 {
-                    "icon":"",
+                    "icon1":"mdi-map-marker",
                     "title":"Essaouira, Maroc",
                     "subtitle":"ville & pays de Moga Menuisier",
                     "icon2":""

@@ -1,7 +1,7 @@
 <template>
 <section class="TheContactForm" >
         <v-container >
-<TheComponentTitle :title="title" />
+<TheComponentTitle :title="data.title" />
       </v-container>
   <v-card
     :loading="loading"
@@ -19,54 +19,46 @@
         indeterminate
       ></v-progress-linear>
     </template>
-    <v-card-title>Entrons en contact</v-card-title>
+    <v-card-title> {{ data.headline }} </v-card-title>
 
     <v-card-text>
-      <div>Pour tous renseignements contactez Moga Menuisier.</div>
+      {{ data.text }}
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
 
-    <v-card-title>Les honoraires de Moga menuisier</v-card-title>
+    <v-card-title> {{ data.hours_work.title }} </v-card-title>
 
     <v-card-text>
       <v-chip-group>
-        <v-chip>9:30 PM</v-chip>
+        <v-chip> {{ data.hours_work.start_work }} </v-chip>
 
-        <v-chip>19:00 AM</v-chip>
+        <v-chip> {{ data.hours_work.end_work }} </v-chip>
       </v-chip-group>
     </v-card-text>
       <v-list two-line>
-      <v-list-item>
-        <v-list-item-icon>
-          <v-icon color="indigo">
-            mdi-phone
-          </v-icon>
-        </v-list-item-icon>
+        <div 
+            v-for="(value,index) in data.infos"
+            :key="index"
+        >
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="indigo">
+               {{ value.icon1 }} 
+              </v-icon>
+            </v-list-item-icon>
 
-        <v-list-item-content>
-          <v-list-item-title>+212 6 09 88 97 70</v-list-item-title>
-          <v-list-item-subtitle>Mobile</v-list-item-subtitle>
-        </v-list-item-content>
+            <v-list-item-content>
+              <v-list-item-title> {{ value.title }} </v-list-item-title>
+              <v-list-item-subtitle> {{ value.subtitle }} </v-list-item-subtitle>
+            </v-list-item-content>
 
-        <v-list-item-icon>
-          <v-icon>mdi-whatsapp</v-icon>
-        </v-list-item-icon>
-      </v-list-item>
-
-      <v-divider inset></v-divider>
-      <v-list-item>
-        <v-list-item-icon>
-          <v-icon color="indigo">
-            mdi-map-marker
-          </v-icon>
-        </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-list-item-title>Essaouira</v-list-item-title>
-          <v-list-item-subtitle>Morocco</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
+            <v-list-item-icon>
+              <v-icon> {{ value.icon2 }} </v-icon>
+            </v-list-item-icon>
+          </v-list-item>
+          <v-divider inset></v-divider>
+        </div>
     </v-list>
 </v-col>
       <v-col class="col-12 col-md-6" >
@@ -114,13 +106,18 @@
   </section>
 </template>
 <script>
+import { mapState } from 'vuex'
 import TheComponentTitle from '~/components/TheComponentTitle'
   export default {
     components:{
       TheComponentTitle
     },
+    computed: {
+        ...mapState({
+            data: state => state.list.contact,
+        }),
+    },
     data: () => ({
-      title:'contact',
       loading: false,
       valid: true,
       name: '',
