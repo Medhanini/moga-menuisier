@@ -1,5 +1,5 @@
 <template>
-    <h1 class="text-uppercase pt-12" > {{ title }} </h1>
+    <h2 class="text-uppercase pt-12" > {{ title }} </h2>
 </template>
 <script>
 export default {

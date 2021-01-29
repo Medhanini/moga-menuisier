@@ -2,50 +2,15 @@
 <section class="TheAboutUs" >
   <v-container>
     <TheComponentTitle :title="item.title" />
-    <v-row class="pt-12  mt-md-12" >
-      <v-col class="col-12 col-md-4" >
+    <v-row class="pt-4 pt-sm-12  mt-md-12" >
+      <v-col class="col-12 col-sm-4" >
         <v-img :src="item.src" ></v-img>
       </v-col>
-      <v-col>
+      <v-col class="col-12 col-sm-8" >
         <p class="text" v-text="item.description" ></p>
       </v-col>
     </v-row>
   </v-container>
-  
-<!-- <v-row dense>
-        <v-col
-          v-for="(item, i) in items"
-          :key="i"
-          cols="12"
-        >
-          <v-card
-          height="100%"
-          class="py-10"
-            :color="item.color"
-            dark
-          >
-            <v-container class="d-flex flex-no-wrap justify-space-between">
-              <div>
-                <v-card-title
-                  class="headline"
-                  v-text="item.title"
-                ></v-card-title>
-                <v-card-text>
-                    {{ item.description }}
-                </v-card-text>
-                <v-card-subtitle v-text="item.artist"></v-card-subtitle>
-              </div>
-
-              <v-avatar
-                class="ma-3"
-                tile
-              >
-                <v-img :src="item.src"></v-img>
-              </v-avatar>
-            </v-container>
-          </v-card>
-        </v-col>
-      </v-row> -->
       </section>
 </template>
 

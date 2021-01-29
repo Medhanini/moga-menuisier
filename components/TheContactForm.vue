@@ -11,7 +11,7 @@
 
       <v-container >
 <v-row>
-<v-col>
+<v-col class="col-12 col-md-6" >
     <template slot="progress">
       <v-progress-linear
         color="deep-purple"
@@ -55,22 +55,6 @@
       </v-list-item>
 
       <v-divider inset></v-divider>
-
-      <!-- <v-list-item>
-        <v-list-item-icon>
-          <v-icon color="indigo">
-            mdi-email
-          </v-icon>
-        </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-list-item-title>aliconnors@example.com</v-list-item-title>
-          <v-list-item-subtitle>Personal</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider inset></v-divider> -->
-
       <v-list-item>
         <v-list-item-icon>
           <v-icon color="indigo">
@@ -85,8 +69,9 @@
       </v-list-item>
     </v-list>
 </v-col>
-      <v-col cols="6" >
+      <v-col class="col-12 col-md-6" >
   <v-form
+  class="mx-2 "
     ref="form"
     v-model="valid"
     lazy-validation

@@ -5,7 +5,8 @@
         v-for="(value ,index) in data"
         :key="index"
     >
-        {{ value.name }}
+    <h5>{{ value.name }}</h5>
+        
     </v-chip>
     </div>
 </template>
@@ -40,7 +41,7 @@ export default {
                     name:'Menuiserie Aluminium à Essaouira - Maroc'
                 },
                 {
-                    name:'essaouira'
+                    name:'Essaouira - Maroc'
                 }
             ]
         }
