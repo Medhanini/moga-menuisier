@@ -2,8 +2,8 @@
 <div>
   <h1 v-show="false" >Menuiserie Aluminium à Essaouira - Maroc | Moga-menuisier.com</h1>
 <TheCarousel />
-<TheOurServices />
-<TheAboutUs />
+<TheOurServices id="nos_services" />
+<TheAboutUs id="a_propos" />
 <TheContactForm id="contact" />
 <!-- <TheNumbers /> -->
 </div>

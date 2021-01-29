@@ -3,10 +3,11 @@
     <TheNavBar />
      <v-main  >
         <nuxt />
-    </v-main>
-    <TheFooter />
+
     <TheScrolltoTop/>
     <TheWhatsappBtn />
+    </v-main>
+    <TheFooter />
   </v-app>
 </template>
 

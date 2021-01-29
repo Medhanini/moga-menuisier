@@ -1,61 +1,52 @@
 <template>
 <div>
-    <v-menu v-if="menu" offset-y >
+  <!-- <template v-if="menu"  >
+    <v-menu offset-y >
       <template v-slot:activator="{ on: menu, attrs }">
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on: tooltip }">
               <v-avatar 
               v-bind="attrs"
-              v-on="{ ...tooltip, ...menu }" item>
+              v-on="{ ...menu }" item>
               <v-icon >
                   mdi-dots-vertical
               </v-icon>
               </v-avatar>
-          </template>
-          <span>menu moga-menuisier.com</span>
-        </v-tooltip>
       </template>
       <v-list>
         <v-list-item
-          v-for="(item, index) in links"
+          v-for="(value,index) in data"
           :key="index"
-          v-scroll-to="'#contact'"
+          v-scroll-to="value.link"
         >
           <v-list-item-title>
-            {{ item }}
+            {{ value.name }}
           </v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
-    <div v-else >
+  </template>
+    <template v-else > -->
     <v-btn
-        v-for="link in links"
-        :key="link"
+        v-for="(value,index) in data"
+        :key="index"
         color="white"
         text
         rounded
         class="my-2"
-        v-scroll-to="'#contact'"
+        v-scroll-to="value.link"
       >
-            {{ link }}
+            {{ value.name }}
       </v-btn>
-    </div>
+    <!-- </template> -->
 </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   name: "TheNavigation",
-  data() {
-    return {
-      links: [
-        'à propos',
-        'nos experts',
-        'nos services',
-        'Contact Us',
-      ]
-    };
-  },
   computed: {
+        ...mapState({
+            data: state => state.list.navigation,
+        }),
         menu(){
         switch (this.$vuetify.breakpoint.name) {
           case 'xs': return true
