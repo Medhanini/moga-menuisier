@@ -19,11 +19,10 @@
         <v-list-item
           v-for="(item, index) in links"
           :key="index"
+          v-scroll-to="'#contact'"
         >
           <v-list-item-title>
-          <nuxt-link to="'/a-propos'" >
             {{ item }}
-          </nuxt-link>
           </v-list-item-title>
         </v-list-item>
       </v-list>
@@ -36,10 +35,9 @@
         text
         rounded
         class="my-2"
+        v-scroll-to="'#contact'"
       >
-        <nuxt-link to="'/a-propos'" >
             {{ link }}
-          </nuxt-link>
       </v-btn>
     </div>
 </div>

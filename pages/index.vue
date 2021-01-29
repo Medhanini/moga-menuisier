@@ -4,7 +4,7 @@
 <TheCarousel />
 <TheOurServices />
 <TheAboutUs />
-<TheContactForm />
+<TheContactForm id="contact" />
 <!-- <TheNumbers /> -->
 </div>
 </template>
