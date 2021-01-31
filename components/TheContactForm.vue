@@ -132,7 +132,62 @@ import TheComponentTitle from '~/components/TheComponentTitle'
         v => /.+@.+\..+/.test(v) || 'E-mail Doit être valide',
       ]
     }),
-
+    jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      "@graph": 
+            [
+               {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Essaouira, Maroc",
+                  "postalCode": "44000",
+                  "streetAddress": "Azlef Essaouira, Maroc"
+                },
+                "email": "contact@moga-menuisier.com",
+                "faxNumber": "+212609889770",
+                "member": [
+                  {
+                    "@type": "Organization"
+                  },
+                  {
+                    "@type": "Organization"
+                  }
+                ],
+                "alumni": [
+                  {
+                    "@type": "Person",
+                    "name": "Karim aluminium"
+                  },
+                  {
+                    "@type": "Person",
+                    "name": "Mohamed aluminium"
+                  },
+                  {
+                    "@type": "Person",
+                    "name": "Ayoub aluminium"
+                  }
+                ],
+                "name": "https://moga-menuisier.com/ (MogaMenuisier)",
+                "telephone": "+212 6 09 88 97 70"
+              },
+              {
+                  "@context": "https://schema.org",
+                  "@type": ["TouristAttraction", "HomeAndConstructionBusiness"],
+                  "name": "Moga Menuisier",
+                  "description": "Moga Menuisier est une société spécialisée dans la menuiserie Aluminium , Inox ou/et MDF Disposant d'un vaste atelier parfaitement équipé, Moga Menuisier réalise sur mesure tous travaux de menuiserie Moins cher avec une large expérience dans le domaine de menuiserie, La passion et le savoir-faire de nos artisans .Impliqués dans notre travail, nous vous faisons profiter d’un travail professionnel et d’une prestation de qualité optimale.",
+                  "openingHours": "Lundi,Mardi,Mercredi,Jeudi,Vendredi,Samedi 09:00-19:30",
+                  "telephone": "+212609889770",
+                  "url":"https://moga-menuisier.com/",
+                  "image":"https://moga-menuisier.com/images/logo.png",
+                  "address":"azlef Essaouira, Maroc",
+                  "priceRange":"100$"
+              }
+            ]
+    };
+  },
     methods: {
       reserve () {
         this.loading = true
@@ -144,7 +199,7 @@ import TheComponentTitle from '~/components/TheComponentTitle'
         from: this.name,
         subject: 'Moga Menuisier from:'+this.email,
         text: this.message,
-        to: 'mohamed.hanini95@gmail.com',
+        to: 'contact@moga-menuisier.com',
       })
       },
       reset () {

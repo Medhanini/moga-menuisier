@@ -56,6 +56,31 @@ export default {
           case 'xl': return false
         }
       }
-      }
+      },
+      jsonld() {
+    const items = this.data.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': "https://moga-menuisier.com/",
+        name: item.name,
+      },
+    }));
+    return {
+      '@context': 'http://schema.org',
+      "@graph": 
+            [
+               {
+                    "@type": "WebPage",
+                    "name": "Accueil",
+                    "description": "Moga Menuisier est une société spécialisée dans la menuiserie Aluminium , Inox ou/et MDF Disposant d'un vaste atelier parfaitement équipé, Moga Menuisier réalise sur mesure tous travaux de menuiserie Moins cher avec une large expérience dans le domaine de menuiserie, La passion et le savoir-faire de nos artisans .Impliqués dans notre travail, nous vous faisons profiter d’un travail professionnel et d’une prestation de qualité optimale."
+                },
+                {
+                  '@type': 'BreadcrumbList',
+                  itemListElement: items,
+                }
+            ]
+    };
+  }
 };
 </script>

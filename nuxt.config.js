@@ -39,6 +39,7 @@ export default {
   plugins: [
     { src: "~/plugins/aos.js", mode: "client" },
     { src: '~plugins/vue-scrollto.js', ssr: false },
+    { src: '~plugins/jsonld.js' },
   ],
   /*
   ** Auto import components

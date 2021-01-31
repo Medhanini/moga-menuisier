@@ -24,6 +24,67 @@ export default {
     TheAboutUs,
     TheNumbers,
     TheContactForm
-  }
+  },
+  data() {
+    return {
+      breadcrumbs: [
+        {
+          url: 'https://example.com',
+          text: 'top page',
+        },
+        {
+          url: 'https://example.com/foo',
+          text: 'foo',
+        },
+        {
+          url: 'https://example.com/foo/bar',
+          text: 'bar',
+        },
+      ],
+    };
+  },
+  // jsonld() {
+  //   const items = this.breadcrumbs.map((item, index) => ({
+  //     '@type': 'ListItem',
+  //     position: index + 1,
+  //     item: {
+  //       '@id': item.url,
+  //       name: item.text,
+  //     },
+  //   }));
+  //   return {
+  //     '@context': 'http://schema.org',
+  //     "@graph": 
+  //           [
+  //              {
+  //                   "@type": "WebPage",
+  //                   "name": this.$store.state.pages.item.metaTitle,
+  //                   "description": this.$store.state.pages.item.metaDescription
+  //               },
+  //               {
+  //                   "@type": "LocalBusiness",
+  //                   "image": [
+  //                               primaryImageUrl,
+  //                               secondaryImageUrl
+  //                               ],
+  //                   "address": {
+  //                       "@type": "PostalAddress",
+  //                       "addressLocality": this.$store.state.organization.item.addresses[0].country,
+  //                       "addressRegion": this.$store.state.organization.item.addresses[0].city,
+  //                       "streetAddress": this.$store.state.organization.item.addresses[0].address
+  //                   },
+  //                   "description": this.$store.state.organization.item.description,
+  //                   "name": this.$store.state.organization.item.name,
+  //                   "telephone": this.$store.state.organization.item.phone,
+  //                   "priceRange":"25$"
+  //               },
+  //               {
+  //                 '@type': 'BreadcrumbList',
+  //                 itemListElement: items,
+  //               }
+  //           ]
+  //   };
+  // },
+
 }
 </script>

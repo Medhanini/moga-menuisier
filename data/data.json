@@ -70,19 +70,28 @@
                 {
                     "icon1":"mdi-phone",
                     "title":"+212 6 09 88 97 70",
-                    "subtitle":"Numéro de téléphone de Moga Menuisier",
+                    "subtitle":"Numéro de téléphone",
                     "icon2":"mdi-whatsapp"
+                },
+                {
+                    "icon1":"mdi-email",
+                    "title":"contact@moga-menuisier.com",
+                    "subtitle":"E-mail",
+                    "icon2":""
                 },
                 {
                     "icon1":"mdi-map-marker",
                     "title":"Essaouira, Maroc",
-                    "subtitle":"ville & pays de Moga Menuisier",
+                    "subtitle":"ville & pays",
                     "icon2":""
                 }
             ]
         },
         "footer":{
-            
+            "description":{
+                "img":"",
+                "text":""
+            }
         }
     }
 }
