@@ -30,7 +30,7 @@ import TheComponentTitle from '~/components/TheComponentTitle'
     }
   }
 </script>
-<style lang="scss">
+<style >
 .TheAboutUs{
   height: 500px;
   background-image: url('/images/bg.jpeg');

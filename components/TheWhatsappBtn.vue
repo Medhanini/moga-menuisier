@@ -16,7 +16,7 @@ export default {
   name:"",
   data(){
       return{
-        number:"0609889770", message:"Bonjour, j'ai eu votre numéro su moga menuisier"
+        number:"+212609889770", message:"Bonjour, j'ai eu votre numéro su moga menuisier"
       }
     },
     computed:{
