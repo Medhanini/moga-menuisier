@@ -58,6 +58,27 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
+    ['nuxt-mail', {
+      message: {
+        to: 'medhanini@moga-menuisier.com',
+      },
+      smtp: {
+        host: "mail47.lwspanel.com",
+        port: 587,
+      },
+    }],
+    // ['nuxt-mail', {
+    //   message: {
+    //     to: 'mohamed.hanini95@gmail.com',
+    //   },
+    //   smtp: {
+    //     service: 'gmail',
+    //       auth: {
+    //       user: 'mohamed.hanini95@gmail.com',
+    //       pass: 'kfxshvyendisddoz'
+    //     }
+    //   },
+    // }],
     // '@nuxtjs/cloudinary',
   //   ['nuxt-mail', {
   //     smtp: {

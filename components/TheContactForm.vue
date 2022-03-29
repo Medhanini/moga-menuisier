@@ -91,7 +91,7 @@
       :disabled="!valid"
       color="primary"
       class="mr-4"
-      @click="validate"
+      @click="send()"
       block
       elevation="0"
     >
@@ -189,6 +189,30 @@ import TheComponentTitle from '~/components/TheComponentTitle'
     };
   },
     methods: {
+      send(){
+        this.$mail.send({ 
+          from: 'John Doe',
+        subject: 'Incredible',
+        text: 'This is an incredible test message',
+          }).then(()=> {
+            console.log('sent bro')
+        })
+        .catch((e) => {
+            console.log(e)
+        })
+      },
+      mailit(){
+        this.$axios.$post('/mail/send',{
+          from: 'John Doe',
+        subject: 'Incredible',
+        text: 'This is an incredible test message',
+          }).then(()=> {
+            console.log('sent bro')
+        })
+        .catch((e) => {
+            console.log(e)
+        })
+      },
       reserve () {
         this.loading = true
 
