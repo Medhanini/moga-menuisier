@@ -14,7 +14,7 @@
     "@nuxtjs/axios": "^5.12.5",
     "aos": "^3.0.0-beta.6",
     "emailjs-com": "^2.6.4",
-    "nuxt": "^2.13.0",
+    "nuxt": "^3.0.0",
     "nuxt-jsonld": "^1.5.0",
     "nuxt-mail": "^1.0.2",
     "vue-carousel-3d": "^0.2.0",
@@ -23,9 +23,9 @@
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.2.1",
-    "@nuxtjs/vuetify": "^1.11.2",
+    "@nuxtjs/vuetify": "^1.12.3",
     "fibers": "^5.0.0",
     "sass": "^1.43.4",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^13.2.0"
   }
 }
